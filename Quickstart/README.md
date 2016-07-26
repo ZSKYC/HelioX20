@@ -49,7 +49,7 @@ If you are already familiar with the Helio X20 board and would like to change ou
 
 ## Update your system
 
-< Insert system update information >
+You can update your system by flash a new images. As the [**Steps**](../Downloads/AOSP.md)
 
 ## Features
 
