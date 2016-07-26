@@ -6,7 +6,7 @@ Learn about your Helio X20 board as well as how to prepare and set up for basic 
 
 **Need**
 - [Power adapter](https://www.96boards.org/products/accessories/power/)
-   - 96Boards specifications requires a 6.5V-18V with 2000mA Power adapter
+   - 96Boards specifications requires a 8V-18V with 2000mA Power adapter
 - [USB Keyboard and Mouse](USBKeyBoardMouse.md)
    - With two USB-A connectors, all 96Boards can be equiped with a full sized keyboard and mouse
 - Full size HDMI Cable
@@ -59,7 +59,7 @@ If you are already familiar with the Helio X20 board and would like to change ou
 | CPU | 2x ARM Cortex-A72 @ 2.1GHz ~ 2.3GHz<br>4x Cortex-A53 @ 1.95GHz<br>4x Cortex-A53 @ 1.4GHz |
 | GPU |ARM Mail-T880 GPU operating at up to 800MHz |
 | RAM | DDR: 2GB LPDDR3  |
-| PMU | HI6553V100|
+| PMU | MT6351|
 | Storage |	8GB eMMC5.1 on board storage MicroSD card slot  |
 | Ethernet Port | USB2.0 expansion |
 | Wireless | Wi-Fi 802.11 a/b/g/n + Bluetooth 4.1  |
@@ -72,12 +72,12 @@ If you are already familiar with the Helio X20 board and would like to change ou
 | LED |	1 x WiFi activity LED（Yellow） 1 x BT  activity LED (Blue) 4 x User LEDs (Green)|
 | Button  |Power Button ： Button Power on/off & Reset the system|
 | Power Source | 8V~18V@3A, Plug specification is inner diameter 1.7mm and outer diameter 4.8mm|
-| OS Support |	Android 4.2/Linux |
-| Size |	85mm x 55mm  |
+| OS Support |	Android Marshmallow 6.0 |
+| Size |	85mm x 54mm  |
 
 **IMPORTANT NOTES**
 
-HDMI EDID display data is used to determine the best display resolution. On monitors and TVs that support 1080p (or 2K) this resolution will be selected. This selected mode will work with most but not all monitors/TVs. See below for further information on what to do if your monitor/TV does not display the UI.
+HDMI EDID display data is used to determine the best display resolution. On monitors and TVs that support 1080p(or less) this resolution will be selected. This selected mode will work with most but not all monitors/TVs. See below for further information on what to do if your monitor/TV does not display the UI.
 There are limitations on the usage of the USB ports on the Helio X20 Development Board. Please refer to the Hardware section in the document for further information.
 
 ## Power Supply
@@ -116,7 +116,7 @@ Helio X20 Development board comes with 8GB for eMMC size.
 
 ## Tri-Cluser Deca-Core
 
-- Two 2.3-2.5GHz A72 core, responsible for showing the highest performance.
+- Two 2.-2.3GHz A72 core, responsible for showing the highest performance.
 - Four 2.0GHz A53 core, responsible for balancing performance and power consumption.
 - Four 1.4GHz A53 core, responsible for the low load tasks and power saving.
 
@@ -126,22 +126,20 @@ The Helio X20 board does not support a battery powered RTC. System time will be 
 
 ## System and User LEDs
 
-Each board led has a directory in /sys/class/leds. By default the LEDs use the following triggers:
+Helio X20 board leds have a directory in /sys/class/misc/96board_leds/. By default the LEDs use the following triggers:
 
 LED | Trigger
 --- | -------
-wifi_active | phy0tx (WiFi Tx)
-bt_active | hci0tx (Bluetooth Tx)
-user_led1 | heartbeat
-user_led2 | mmc0 (disk access, eMMC)
-user_led3 | mmc1 (disk access, microSD card)
-user_led4 | CPU core 0 active(not used)
+wifi_active | WLAN_LED_CTRL (WiFi)
+bt_active | BT_LED_CTRL (Bluetooth)
+user_led1 | USER_LED_CTRL1
+user_led2 | USER_LED_CTRL2
+user_led3 | USER_LED_CTRL3
+user_led4 | USER_LED_CTRL4
 
 To change a user LED you can do the following as a root user (using ADB):
 ```
-# echo heartbeat > /sys/class/leds/<led_dir>/trigger      make a LED flash
-# cat /sys/class/leds/<led_dir>/trigger                   show triggers
-# echo none > /sys/class/leds/<led_dir>/trigger           remove triggers    
-# echo 1 > /sys/class/leds/<led_dir>/brightness           turn LED on
-# echo 0 > /sys/class/leds/<led_dir>/brightness           turn LED off
+# cat /sys/class/misc/96board_leds/<led_dir>      check the status of led0
+# echo on /sys/class/misc/96board_leds/<led_dir>                   light on <led_dir>
+# echo off /sys/class/misc/96board_leds/<led_dir>           light off <led_dir>
 ```
