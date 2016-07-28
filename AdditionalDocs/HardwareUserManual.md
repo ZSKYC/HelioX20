@@ -52,10 +52,10 @@
 
 The Helio X20 Development Board is a 96Boards compliant community board based on MediaTek HELIO X20 platform.The following table lists its key features:
 
-<img src="http://i.imgur.com/Mdjs6Nx.png" data-canonical-src="http://i.imgur.com/Mdjs6Nx.png" width="250" height="160" />
-<img src="http://i.imgur.com/3EleXMR.png" data-canonical-src="http://i.imgur.com/3EleXMR.png" width="250" height="160" />
-<img src="http://i.imgur.com/p1N2nDt.png" data-canonical-src="http://i.imgur.com/p1N2nDt.png" width="250" height="160" />
- The pictures are not the latest, please update.I have sent the latest pictures by email.
+<img src="http://i.imgur.com/d1tNNdh.png" data-canonical-src="http://i.imgur.com/d1tNNdh.png" width="250" height="160" />
+<img src="http://i.imgur.com/Mch20eW.png" data-canonical-src="http://i.imgur.com/Mch20eW.png" width="250" height="160" />
+<img src="http://i.imgur.com/mK6ciL5.png" data-canonical-src="http://i.imgur.com/mK6ciL5.png" width="250" height="160" />
+ 
 - **Processor**:
    - MediaTek HELIO X20 MT6797
    - Dual-core ARM@Cortex-A72 MPCoreTM  operating at up to 2.3GHz
@@ -121,8 +121,7 @@ The Helio X20 Development Board is a 96Boards compliant community board based on
 
 The box contains one Helio X20 Development Board and a quick start guide.
 
-<img src="http://i.imgur.com/Mdjs6Nx.png" data-canonical-src="http://i.imgur.com/Mdjs6Nx.png" width="400" height="270" />
- The pictures are not the latest, please update.I have sent the latest pictures by email.
+<img src="http://i.imgur.com/d1tNNdh.png" data-canonical-src="http://i.imgur.com/d1tNNdh.png" width="400" height="270" />
 <img src="http://i.imgur.com/GZCNzUW.png" data-canonical-src="http://i.imgur.com/GZCNzUW.png" width="450" height="250" />
 
 
