@@ -69,9 +69,10 @@ There are limitations on the usage of the USB ports on the Helio X20 Development
 
 **The Helio X20 comes preloaded with Android and can be up and running with a few simple steps**
 
-- Connect the Helio X20 to your display with the HDMI cable. It is important to do this first because the monitor will not detect the board if it is connected after starting. Ensure that the source for the display is switched to the HDMI port you are using
-- Connect the USB keyboard and mouse. Do not connect the USB OTG port to your computer – this will prevent the keyboard and mouse from operating. The USB OTG port is the micro USB connector on the board
-- Connect the power supply to the Helio X20. The board will begin to boot Android immediately
+- Connect the HDMI cable to the Helio X20 Development Board connector (marked CON6501) and to the LCD Monitor
+- Set the the third pin (USB HOST SET) of switch SW3205 to the position ON and connect the keyboard to USB connector marked CON6402 and the mouse to the USB connector marked CON6401 (It doesn’t matter which order you connect them in.)
+- Plug the power supply into the power outlet
+- Press down the button (marked SW3201), and keep more than 3 seconds, the Android system will start
 
 ***
 
