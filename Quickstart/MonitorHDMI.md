@@ -2,7 +2,7 @@
 
 A standard monitor or TV supporting at least 640x480 resolution is required. Interlaced operation is not currently supported. The maximum resolutions currently supported are 1920x1080p or 1920x1200p.
 
-The image resolution of monitor shold be bigger than what you set for X20 Board(720P default).
+The image resolution of monitor should be bigger than what you set for X20 Board(720P default).
 
 ## HDMI
 
