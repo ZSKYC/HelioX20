@@ -72,6 +72,8 @@ There are limitations on the usage of the USB ports on the Helio X20 Development
 - Plug the power supply into the power outlet
 - Press down the button (marked SW3201), and keep more than 3 seconds, the Android system will start
 
+> Note: If set the first pin (AUTO_BOOT_SET) of switch SW3205 to the position ON, the Android system will start automatically when the power supply is plugged into the power outlet.
+
 ***
 
 ## Updating to a new release or change your operating system
