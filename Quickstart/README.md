@@ -63,7 +63,7 @@ There are limitations on the usage of the USB ports on the Helio X20 Development
 
 ***
 
-## Initial Power up
+## Starting the board for the first time
 
 **The Helio X20 comes preloaded with Android and can be up and running with a few simple steps**
 
