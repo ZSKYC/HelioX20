@@ -5,6 +5,6 @@ Explore what makes your Helio X20 unique by checking out technical specification
 ## Hardware
 
 - Hardware Manual ([View](HardwareUserManual.md))
-- Schematics ([View]() / [Download]())
-- BOM ([View]() / [Download]())
+- Schematics ([View](https://github.com/sdrobertw/HelioX20/blob/master/AdditionalDocs/HelioX20_Schematics_v2.0.pdf) / [Download](https://github.com/sdrobertw/HelioX20/raw/master/AdditionalDocs/HelioX20_Schematics_v2.0.pdf))
+- BOM ([View](https://github.com/sdrobertw/HelioX20/blob/master/AdditionalDocs/HelioX20_BOM.pdf) / [Download](https://github.com/sdrobertw/HelioX20/raw/master/AdditionalDocs/HelioX20_BOM.pdf))
 - [Hardware Notes](HardwareNotes.md)
