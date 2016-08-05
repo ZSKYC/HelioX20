@@ -1,6 +1,6 @@
 # Quickstart
 
-Learn about your Helio X20 board as well as how to prepare and set up for basic use
+Learn about your MediaTek X20 board as well as how to prepare and set up for basic use
 
 ## Setup - What you will need
 
@@ -26,7 +26,7 @@ Learn about your Helio X20 board as well as how to prepare and set up for basic 
 
 # Out of the Box
 
-The following subsections should describe how to get started with the Helio X20 using the release build shipped with the boards. The Helio X20 Development Board is ready to use “out of the box” with a pre-installed version of Android.
+The following subsections should describe how to get started with the MediaTek X20 using the release build shipped with the boards. The MediaTek X20 Development Board is ready to use “out of the box” with a pre-installed version of Android.
 
 <img src="http://i.imgur.com/Mdjs6Nx.png" data-canonical-src="http://i.imgur.com/Mdjs6Nx.png" width="250" height="160" />
 <img src="http://i.imgur.com/3EleXMR.png" data-canonical-src="http://i.imgur.com/3EleXMR.png" width="250" height="160" />
@@ -59,15 +59,15 @@ The following subsections should describe how to get started with the Helio X20 
 **IMPORTANT NOTES**
 
 HDMI EDID display data is used to determine the best display resolution. On monitors and TVs that support 1080p(or less) this resolution will be selected. This selected mode will work with most but not all monitors/TVs. See below for further information on what to do if your monitor/TV does not display the UI.
-There are limitations on the usage of the USB ports on the Helio X20 Development Board. Please refer to the Hardware section in the document for further information.
+There are limitations on the usage of the USB ports on the MediaTek X20 Development Board. Please refer to the Hardware section in the document for further information.
 
 ***
 
 ## Starting the board for the first time
 
-**The Helio X20 comes preloaded with Android and can be up and running with a few simple steps**
+**The MediaTek X20 comes preloaded with Android and can be up and running with a few simple steps**
 
-- Connect the HDMI cable to the Helio X20 Development Board connector (marked CON6501) and to the LCD Monitor
+- Connect the HDMI cable to the MediaTek X20 Development Board connector (marked CON6501) and to the LCD Monitor
 - Set the the third pin (USB HOST SET) of switch SW3205 to the position ON and connect the keyboard to USB connector marked CON6402 and the mouse to the USB connector marked CON6401 (It doesn’t matter which order you connect them in.)
 - Plug the power supply into the power outlet
 - Press down the button (marked SW3201), and keep more than 3 seconds, the Android system will start
@@ -78,10 +78,10 @@ There are limitations on the usage of the USB ports on the Helio X20 Development
 
 ## Updating to a new release or change your operating system
 
-If you are already familiar with the Helio X20 board and would like to change out the stock operating system please proceed to one of the following pages:
+If you are already familiar with the MediaTek X20 board and would like to change out the stock operating system please proceed to one of the following pages:
 
-- [**Downloads page**](../Downloads/README.md): This page lists all Linaro and 3rd party operating systems available for Helio X20
-- [**Installation page**](../Installation/README.md): If you already have the images you need, this page has information on how to install the different operating systems onto your Helio X20 board
+- [**Downloads page**](../Downloads/README.md): This page lists all Linaro and 3rd party operating systems available for MediaTek X20
+- [**Installation page**](../Installation/README.md): If you already have the images you need, this page has information on how to install the different operating systems onto your MediaTek X20 board
 - [**Board Recovery**](../Installation/BoardRecovery.md)
    - If at any time your board is having unexplainable issues, it is suggested to attempt a board recovery. These instructions will guide you through a succesfull board recovery.
 - [**Troubleshooting**](../Troubleshooting/README.md)
