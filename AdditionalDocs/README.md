@@ -5,6 +5,6 @@ Explore what makes your MediaTek X20 unique by checking out technical specificat
 ## Hardware
 
 - Hardware Manual ([View](HardwareUserManual.md))
-- Schematics ([View](https://github.com/sdrobertw/HelioX20/blob/master/AdditionalDocs/HelioX20_Schematics_v2.0.pdf) / [Download](https://github.com/sdrobertw/HelioX20/raw/master/AdditionalDocs/HelioX20_Schematics_v2.0.pdf))
-- BOM ([View](https://github.com/sdrobertw/HelioX20/blob/master/AdditionalDocs/HelioX20_BOM.pdf) / [Download](https://github.com/sdrobertw/HelioX20/raw/master/AdditionalDocs/HelioX20_BOM.pdf))
+- Schematics ([View](https://github.com/sdrobertw/HelioX20/blob/master/AdditionalDocs/MediaTekX20_Schematics_v2.0.pdf) / [Download](https://github.com/sdrobertw/HelioX20/raw/master/AdditionalDocs/MediaTekX20_Schematics_v2.0.pdf))
+- BOM ([View](https://github.com/sdrobertw/HelioX20/blob/master/AdditionalDocs/MediaTekX20_BOM.pdf) / [Download](https://github.com/sdrobertw/HelioX20/raw/master/AdditionalDocs/MediaTekX20_BOM.pdf))
 - [Hardware Notes](HardwareNotes.md)
