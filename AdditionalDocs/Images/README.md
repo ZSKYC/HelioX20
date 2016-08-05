@@ -2,8 +2,6 @@
 
 Each 96Boards must provide a minimum of **three high definition** images and **three standard definition** images. HD and SD criteria, as well as naming conventions for these images are as follows:
 
-Board Images
-
 #### High Definition - 1500x974 - 300dpi
 
 - BoardName_Front_HD
