@@ -5,6 +5,8 @@ Learn about your MediaTek X20 board as well as how to prepare and set up for bas
 ## Setup - What you will need
 
 **Need**
+- [MediaTek X20 Development Board](Board.md)
+   - Read about the MediaTek X20 and see where it is available to buy!
 - [Power adapter](https://www.96boards.org/products/accessories/power/)
    - 96Boards specifications requires a 8V-18V with 2000mA Power adapter
 - [USB Keyboard and Mouse](USBKeyBoardMouse.md)
