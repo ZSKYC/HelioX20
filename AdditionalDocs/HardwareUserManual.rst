@@ -148,8 +148,19 @@ Board Overview
      18          SW3205          Switch for Auto boot and USB HOST set                   
  =========  ================= ===========================================================
 
-<img src="http://i.imgur.com/ydQmi5t.png" data-canonical-src="http://i.imgur.com/ydQmi5t.png" width="400" height="270" />
-<img src="http://i.imgur.com/CFM1kTb.png" data-canonical-src="http://i.imgur.com/CFM1kTb.png" width="400" height="270" />
+.. image:: http://i.imgur.com/ydQmi5t.png
+    :width: 250px
+    :align: left
+    :height: 160px
+    :scale: 50 %
+    :alt: alternate text
+
+.. image:: http://i.imgur.com/CFM1kTb.png
+    :width: 250px
+    :align: left
+    :height: 160px
+    :scale: 50 %
+    :alt: alternate text
 
 `Back to top`_
 
@@ -160,7 +171,12 @@ Board Overview
 System Block Diagram
 ====================
 
-<img src="http://i.imgur.com/YPYH7RJ.png" data-canonical-src="http://i.imgur.com/YPYH7RJ.png" width="750" height="480" />
+.. image:: http://i.imgur.com/YPYH7RJ.png
+    :width: 250px
+    :align: left
+    :height: 160px
+    :scale: 50 %
+    :alt: alternate text
 
 `Back to top`_
 
@@ -285,7 +301,12 @@ USB Ports
 
 The MediaTek X20 Development Board supports a USB device port and three USB host ports via a USB MUX(U6503). The input channel( D+/D-) of USB MUX is connected to the P0 port of the SOC MT6797, and the two output channels(1D+/1D-,2D+/2D-) are connected to micro USB port and USB hub respectively. The three USB host ports are connected to the downstream ports of the USB hub.The control of U6503 is done via a software controlled GPIO (USB_SW_SEL, EINT9 from the SOC MT6797). When this signal is logic low, ‘0’, the USB data lines are routed to the Micro USB connector and the MT6797 P0 port is set to device mode. When ‘USB_SW_SEL’ is logic level high, ‘1’, the USB data lines are routed to U6401 (a 3-port USB HUB) and the MT6797 P0 port is set to host mode. The user can overwrite the software control by sliding switch 3 of dip-switch SW3205 to the ‘ON’ position. That action forces the USB–MUX (U6503) to route the USB data lines to the USB HUB. The overwrite option exists for the host mode only, you cannot hardware overwrite the MUX to force device mode. 
 
-<img src="http://i.imgur.com/IUigl3x.png" data-canonical-src="http://i.imgur.com/IUigl3x.png" width="750" height="480" />
+.. image:: http://i.imgur.com/IUigl3x.png
+    :width: 250px
+    :align: left
+    :height: 160px
+    :scale: 50 %
+    :alt: alternate text
 
 USB Host ports
 --------------
@@ -321,11 +342,13 @@ Power Measurement
 
 The MediaTek X20 Development Board has three current sense resistors R916\ R923\ R924.
 
-| Reference |  Net    |  Description                                       |
-|:----------|:--------|:---------------------------------------------------|
-|    R916   |  DC_IN  |  To measure the current of total base board power  |
-|    R923   |  SYS_5V |  To measure the current of SYS_5V power            |
-|    R924   |  VBAT   |  To measure the current of VBAT power              |
+ =========== ========= ====================================================
+  Reference    Net       Description                                       
+ ----------- --------- ----------------------------------------------------
+     R916      DC_IN     To measure the current of total base board power  
+     R923      SYS_5V    To measure the current of SYS_5V power            
+     R924      VBAT      To measure the current of VBAT power              
+ =========== ========= ====================================================
 
 External Fan Connection
 -----------------------
@@ -403,28 +426,30 @@ Expansion Connectors
 Low Speed Expansion Connector
 -----------------------------
 
-|  MediaTek X20 Signals  |  96Boards Signals |  PIN  |  PIN  |  96Boards Signals  |  MediaTek X20 Signals  |
-|:--------------------|:------------------|:------|------:|-------------------:|--------------------:|
-|    GND              |     GND           |   1   |   2   |    GND             |    GND              |
-|    UCTS0            |     UART0_CTS     |   3   |   4   |    PWR_BTN_N       |    PWRKEY           |
-|    UTXD0            |     UART0_TxD     |   5   |   6   |    RST_BTN_N       |    SYSRSTB          |
-|    URXD0            |     UART0_RxD     |   7   |   8   |    SPI0_SCLK       |    SPI0_CK          |
-|    URTS0            |     UART0_RTS     |   9   |   10  |    SPI0_DIN        |    SPI0_MI          |
-|    UTXD1            |     UART1_TxD     |   11  |   12  |    SPI0_CS         |    SPI0_CS          |
-|    URXD1            |     UART1_RxD     |   13  |   14  |    SPI0_DOUT       |    SPI0_MO          |
-|    SCL4             |     I2C0_SCL      |   15  |   16  |    PCM_FS          |    PCM0_SYNC        |
-|    SDA4             |     I2C0_SDA      |   17  |   18  |    PCM_CLK         |    PCM0_CLK         |
-|    SCL5             |     I2C1_SCL      |   19  |   20  |    PCM_DO          |    PCM0_DO          |
-|    SDA5             |     I2C1_SDA      |   21  |   22  |    PCM_DI          |    PCM0_DI          |
-|    EINT16           |     GPIO-A        |   23  |   24  |    GPIO-B          |    EINT5            |
-|    EINT4            |     GPIO-C        |   25  |   26  |    GPIO-D          |    EINT3            |
-|    EINT2            |     GPIO-E        |   27  |   28  |    GPIO-F          |    EINT1            |
-|    DSI_TE           |     GPIO-G        |   29  |   30  |    GPIO-H          |    LCM_RST          |
-|    CAM_RST0         |     GPIO-I        |   31  |   32  |    GPIO-J          |    CAM_PDN0         |
-|    CAM_RST1         |     GPIO-K        |   33  |   34  |    GPIO-L          |    CAM_PDN1         |
-|    VIO18_PMU        |     +1V8          |   35  |   36  |    SYS_DCIN        |    DC_IN            |
-|    SYS_5V           |     +5V           |   37  |   38  |    SYC_DCIN        |    DC_IN            |
-|    GND              |     GND           |   39  |   40  |    GND             |    GND              |
+ ======================== =================== ======= ======= ==================== ========================
+   MediaTek X20 Signals     96Boards Signals    PIN     PIN     96Boards Signals     MediaTek X20 Signals  
+ ------------------------ ------------------- ------- ------- -------------------- ------------------------
+     GND                    GND                1        2         GND                   GND              
+     UCTS0                  UART0_CTS          3        4         PWR_BTN_N             PWRKEY           
+     UTXD0                  UART0_TxD          5        6         RST_BTN_N             SYSRSTB          
+     URXD0                  UART0_RxD          7        8         SPI0_SCLK             SPI0_CK          
+     URTS0                  UART0_RTS          9        10        SPI0_DIN              SPI0_MI          
+     UTXD1                  UART1_TxD          11       12        SPI0_CS               SPI0_CS          
+     URXD1                  UART1_RxD          13       14        SPI0_DOUT             SPI0_MO          
+     SCL4                   I2C0_SCL           15       16        PCM_FS                PCM0_SYNC        
+     SDA4                   I2C0_SDA           17       18        PCM_CLK               PCM0_CLK         
+     SCL5                   I2C1_SCL           19       20        PCM_DO                PCM0_DO          
+     SDA5                   I2C1_SDA           21       22        PCM_DI                PCM0_DI          
+     EINT16                 GPIO-A             23       24        GPIO-B                EINT5            
+     EINT4                  GPIO-C             25       26        GPIO-D                EINT3            
+     EINT2                  GPIO-E             27       28        GPIO-F                EINT1            
+     DSI_TE                 GPIO-G             29       30        GPIO-H                LCM_RST          
+     CAM_RST0               GPIO-I             31       32        GPIO-J                CAM_PDN0         
+     CAM_RST1               GPIO-K             33       34        GPIO-L                CAM_PDN1         
+     VIO18_PMU              +1V8               35       36        SYS_DCIN              DC_IN            
+     SYS_5V                 +5V                37       38        SYC_DCIN              DC_IN            
+     GND                    GND                39       40        GND                   GND              
+ ======================== =================== ======= ======= ==================== ========================
 
 UART {0/1} 
 ----------
@@ -446,18 +471,18 @@ The 96Boards specification calls for 12 GPIO lines to be implemented on the Low 
 
 The MediaTek X20 board implements this requirement. All GPIOs are routed to the MT6797 SoC. 
 
-- GPIO A -Connects to EINT16 of MT6797 SoC, can serves as external interrupt supporting the 96Boards requirements to create a wake-up event for the SoC. It is a 1.8V signal.
-- GPIO B -Connects to EINT5 of MT6797 SoC, can serves as external interrupt supporting the 96Boards requirements to create a wake-up event for the SoC. It is a 1.8V signal. 
-- GPIO C -Connects to EINT4 of MT6797 SoC, can serves as external interrupt supporting the 96Boards requirements to create a wake-up event for the SoC. It is a 1.8V signal. 
-- GPIO D -Connects to EINT3 of MT6797 SoC, can serves as external interrupt supporting the 96Boards requirements to create a wake-up event for the SoC. It is a 1.8V signal.  
-- GPIO E -Connects to EINT2 of MT6797 SoC, can serves as external interrupt supporting the 96Boards requirements to create a wake-up event for the SoC. It is a 1.8V signal. 
-- GPIO F -Connects to EINT1 of MT6797 SoC, can serves as external interrupt supporting the 96Boards requirements to create a wake-up event for the SoC. It is a 1.8V signal. 
-- GPIO G -Connects to DSI_TE of MT6797 SoC, can serves as DSI_TE or GPIO179. It is a 1.8V signal. 
-- GPIO H -Connects to LCM_RST of MT6797 SoC, can serves as LCM_RST or GPIO180. It is a 1.8V signal. 
-- GPIO I -Connects to CAM_RST0 of MT6797 SoC, can serves as CAM_RST0 or GPIO32. It is a 1.8V signal. 
-- GPIO J -Connects to CAM_PDN0 of MT6797 SoC, can serves as CAM_PDN0 or GPIO28. It is a 1.8V signal. 
-- GPIO K -Connects to CAM_RST1 of MT6797 SoC, can serves as CAM_RST1 or GPIO33. It is a 1.8V signal. 
-- GPIO L -Connects to CAM_PDN1 of MT6797 SoC, can serves as CAM_PDN1 or GPIO29. It is a 1.8V signal. 
+* GPIO A -Connects to EINT16 of MT6797 SoC, can serves as external interrupt supporting the 96Boards requirements to create a wake-up event for the SoC. It is a 1.8V signal.
+* GPIO B -Connects to EINT5 of MT6797 SoC, can serves as external interrupt supporting the 96Boards requirements to create a wake-up event for the SoC. It is a 1.8V signal. 
+* GPIO C -Connects to EINT4 of MT6797 SoC, can serves as external interrupt supporting the 96Boards requirements to create a wake-up event for the SoC. It is a 1.8V signal. 
+* GPIO D -Connects to EINT3 of MT6797 SoC, can serves as external interrupt supporting the 96Boards requirements to create a wake-up event for the SoC. It is a 1.8V signal.  
+* GPIO E -Connects to EINT2 of MT6797 SoC, can serves as external interrupt supporting the 96Boards requirements to create a wake-up event for the SoC. It is a 1.8V signal. 
+* GPIO F -Connects to EINT1 of MT6797 SoC, can serves as external interrupt supporting the 96Boards requirements to create a wake-up event for the SoC. It is a 1.8V signal. 
+* GPIO G -Connects to DSI_TE of MT6797 SoC, can serves as DSI_TE or GPIO179. It is a 1.8V signal. 
+* GPIO H -Connects to LCM_RST of MT6797 SoC, can serves as LCM_RST or GPIO180. It is a 1.8V signal. 
+* GPIO I -Connects to CAM_RST0 of MT6797 SoC, can serves as CAM_RST0 or GPIO32. It is a 1.8V signal. 
+* GPIO J -Connects to CAM_PDN0 of MT6797 SoC, can serves as CAM_PDN0 or GPIO28. It is a 1.8V signal. 
+* GPIO K -Connects to CAM_RST1 of MT6797 SoC, can serves as CAM_RST1 or GPIO33. It is a 1.8V signal. 
+* GPIO L -Connects to CAM_PDN1 of MT6797 SoC, can serves as CAM_PDN1 or GPIO29. It is a 1.8V signal. 
 
 SPI 0 
 -----
@@ -501,38 +526,40 @@ The MediaTek X20 Development Board supports these requirements as follows:
 High Speed Expansion Connector
 ==============================
 
-|  MediaTek X20 Signals |   96Boards Signals   |  PIN  |  PIN  |  96Boards Signals  |             MediaTek X20 Signals             |
-|:-------------------|:---------------------|:------|------:|-------------------:|------------------------------------------:|
-|   SPI1_MO          |   SD_DAT0/SPI1_DOUT  |   1   |   2   |   CSI0_C+          |   RCP                                     |
-|   NC               |   SD_DAT1            |   3   |   4   |   CSI0_C-          |   RCN                                     |
-|   NC               |   SD_DAT2            |   5   |   6   |   GND              |   GND                                     |
-|   SPI1_CS          |   SD_DAT3/SPI1_CS    |   7   |   8   |   CSI0_D0+         |   RDP0                                    |
-|   SPI1_CK          |   SD_SCLK/SPI1_SCLK  |   9   |   10  |   CSI0_D0-         |   RDN0                                    |
-|   SPI1_MI          |   SD_CMD/SPI1_DIN    |   11  |   12  |   GND              |   GND                                     |
-|   GND              |   GND                |   13  |   14  |   CSI0_D1+         |   RDP1                                    |
-|   CAM_CLK0         |   CLK0/CSI0_MCLK     |   15  |   16  |   CCSI0_D1-        |   RDN1                                    |
-|   CAM_CLK1         |   CLK1/CSI1_MCLK     |   17  |   18  |   GND              |   GND                                     |
-|   GND              |   GND                |   19  |   20  |   CSI0_D2+         |   RDP2                                    |
-|   TCP              |   DSI_CLK+           |   21  |   22  |   CSI0_D2-         |   RDN2                                    |
-|   TCN              |   DSI_CLK-           |   23  |   24  |   GND              |   GND                                     |
-|   GND              |   GND                |   25  |   26  |   CSI0_D3+         |   RDP3                                    |
-|   TDP0             |   DSI_D0+            |   27  |   28  |   CSI0_D3-         |   RDN3                                    |
-|   TDN0             |   DSI_D0-            |   29  |   30  |   GND              |   GND                                     |
-|   GND              |   GND                |   31  |   32  |   I2C2_SCL         |   SCL2                                    |
-|   TDP1             |   DSI_D1+            |   33  |   34  |   I2C2_SCL         |   SDA2                                    |
-|   TDN1             |   DSI_D1-            |   35  |   36  |   I2C3_SDA         |   SCL3                                    |
-|   GND              |   GND                |   37  |   38  |   I2C3_SDA         |   SDA3                                    |
-|   TDP2             |   DSI_D2+            |   39  |   40  |   GND              |   GND                                     |
-|   TDN2             |   DSI_D2-            |   41  |   42  |   CSI1_D0+         |   RDP0_A                                  |
-|   GND              |   GND                |   43  |   44  |   CSI1_D0-         |   RDN0_A                                  |
-|   TDP3             |   DSI_D3+            |   45  |   46  |   GND              |   GND                                     |
-|   TDN3             |   DSI_D3-            |   47  |   48  |   CSI1_D1+         |   RDP1_A                                  |
-|   GND              |   GND                |   49  |   50  |   CSI1_D1-         |   RDN1_A                                  |
-|   USB_DP_P1_EXP    |   USB_D+             |   51  |   52  |   GND              |   GND                                     |
-|   USB_DM_P1_EXP    |   USB_D-             |   53  |   54  |   CSI1_C+          |   RCP_A                                   |
-|   GND              |   GND                |   55  |   56  |   CSI1_C-          |   RCN_A                                   |
-|   NC               |   HSIC_STR           |   57  |   58  |   GND              |   GND                                     |
-|   NC               |   HSIC_DATA          |   59  |   60  |   RESERVED         |   Pull-up  to VIO18_PMU<br>via 100K resistor |
+ ======================= ====================== ======= ======= ==================== ==============================================
+   MediaTek X20 Signals     96Boards Signals      PIN     PIN     96Boards Signals                MediaTek X20 Signals           
+ ----------------------- ---------------------- ------- ------- -------------------- ----------------------------------------------
+    SPI1_MO              SD_DAT0/SPI1_DOUT       1        2        CSI0_C+             RCP                                     
+    NC                   SD_DAT1                 3        4        CSI0_C-             RCN                                     
+    NC                   SD_DAT2                 5        6        GND                 GND                                     
+    SPI1_CS              SD_DAT3/SPI1_CS         7        8        CSI0_D0+            RDP0                                    
+    SPI1_CK              SD_SCLK/SPI1_SCLK       9        10       CSI0_D0-            RDN0                                    
+    SPI1_MI              SD_CMD/SPI1_DIN         11       12       GND                 GND                                     
+    GND                  GND                     13       14       CSI0_D1+            RDP1                                    
+    CAM_CLK0             CLK0/CSI0_MCLK          15       16       CCSI0_D1-           RDN1                                    
+    CAM_CLK1             CLK1/CSI1_MCLK          17       18       GND                 GND                                     
+    GND                  GND                     19       20       CSI0_D2+            RDP2                                    
+    TCP                  DSI_CLK+                21       22       CSI0_D2-            RDN2                                    
+    TCN                  DSI_CLK-                23       24       GND                 GND                                     
+    GND                  GND                     25       26       CSI0_D3+            RDP3                                    
+    TDP0                 DSI_D0+                 27       28       CSI0_D3-            RDN3                                    
+    TDN0                 DSI_D0-                 29       30       GND                 GND                                     
+    GND                  GND                     31       32       I2C2_SCL            SCL2                                    
+    TDP1                 DSI_D1+                 33       34       I2C2_SCL            SDA2                                    
+    TDN1                 DSI_D1-                 35       36       I2C3_SDA            SCL3                                    
+    GND                  GND                     37       38       I2C3_SDA            SDA3                                    
+    TDP2                 DSI_D2+                 39       40       GND                 GND                                     
+    TDN2                 DSI_D2-                 41       42       CSI1_D0+            RDP0_A                                  
+    GND                  GND                     43       44       CSI1_D0-            RDN0_A                                  
+    TDP3                 DSI_D3+                 45       46       GND                 GND                                     
+    TDN3                 DSI_D3-                 47       48       CSI1_D1+            RDP1_A                                  
+    GND                  GND                     49       50       CSI1_D1-            RDN1_A                                  
+    USB_DP_P1_EXP        USB_D+                  51       52       GND                 GND                                     
+    USB_DM_P1_EXP        USB_D-                  53       54       CSI1_C+             RCP_A                                   
+    GND                  GND                     55       56       CSI1_C-             RCN_A                                   
+    NC                   HSIC_STR                57       58       GND                 GND                                     
+    NC                   HSIC_DATA               59       60       RESERVED            Pull-up  to VIO18_PMU<br>via 100K resistor 
+ ======================= ====================== ======= ======= ==================== ==============================================
 
 MIPI DSI 0 
 ----------
@@ -591,24 +618,26 @@ The pin 60 of the High Speed Expansion Connector is pulled up to VIO18_PMU via 1
 Analog Expansion Connector
 ==========================
 
-|  PIN  |  MediaTek X20 Signals  |    MediaTek X20 Signals                               |
-|------:|--------------------:|---------------------------------------------------:|
-|   1   |   AU_LOLP           |    Positive output of line-out buffer from MT6351  |
-|   2   |   AU_LOLN           |    Negative output of line-out buffer from MT6351  |
-|   3   |   MICBIAS0          |    Microphone bias 0 from MT6351                   |
-|   4   |   GND               |    Ground                                          |
-|   5   |   AUDREFN           |    Audio reference ground                          |
-|   6   |   MICBIAS1          |    Microphone bias 1 from MT6351                   |
-|   7   |   AU_VIN0_P         |    Microphone channel 0 positive input             |
-|   8   |   AU_HPR            |    Earphone right channel output                   |
-|   9   |   AU_VIN0_N         |    Microphone channel 0 negative input             |
-|   10  |   AU_HPL            |    Earphone left channel output                    |
-|   11  |   GND               |    Ground                                          |
-|   12  |   ACCDET1           |    Accessory detection 1 input                     |
-|   13  |   FM_ANT            |    FM antenna positive input                       |
-|   14  |   AU_HSP            |    Headset positive output                         |
-|   15  |   FM_RX_N_6631      |    FM antenna negative output                      |
-|   16  |   AU_HSN            |    Headset negative output                         |
+ ======= ======================== =======================================================
+   PIN     MediaTek X20 Signals       MediaTek X20 Signals                               
+ ------- ------------------------ -------------------------------------------------------
+   1      AU_LOLP                  Positive output of line-out buffer from MT6351  
+   2      AU_LOLN                  Negative output of line-out buffer from MT6351  
+   3      MICBIAS0                 Microphone bias 0 from MT6351                   
+   4      GND                      Ground                                          
+   5      AUDREFN                  Audio reference ground                          
+   6      MICBIAS1                 Microphone bias 1 from MT6351                   
+   7      AU_VIN0_P                Microphone channel 0 positive input             
+   8      AU_HPR                   Earphone right channel output                   
+   9      AU_VIN0_N                Microphone channel 0 negative input             
+   10     AU_HPL                   Earphone left channel output                    
+   11     GND                      Ground                                          
+   12     ACCDET1                  Accessory detection 1 input                     
+   13     FM_ANT                   FM antenna positive input                       
+   14     AU_HSP                   Headset positive output                      
+   15     FM_RX_N_6631             FM antenna negative output                     
+   16     AU_HSN                   Headset negative output                      
+ ======= ======================== =======================================================
 
 `Back to top`_
 
@@ -622,7 +651,12 @@ Power Management Overview
 Block Diagram
 -------------
 
-<img src="http://i.imgur.com/EzSF6WF.png" data-canonical-src="http://i.imgur.com/EzSF6WF.png" width="750" height="480" />
+.. image:: http://i.imgur.com/EzSF6WF.png
+    :width: 250px
+    :align: left
+    :height: 160px
+    :scale: 50 %
+    :alt: alternate text
 
 DC Power Input
 --------------
@@ -632,15 +666,24 @@ DC Power Input
 
 > Note: Please refer to the mechanical size of the DC plug below.The inside diameter of the plug is 1.7mm，the outer diameter of the plug is 4.75mm.The positive electrode of the DC plug is in the inside, and the negative pole is outside.
 
-<img src="http://i.imgur.com/7qEu1Jc.png" data-canonical-src="http://i.imgur.com/7qEu1Jc.png" width="250" height="160" />
+.. image:: http://i.imgur.com/7qEu1Jc.png
+    :width: 250px
+    :align: left
+    :height: 160px
+    :scale: 50 %
+    :alt: alternate text
 
 Power Source Selection and Sequencing
 -------------------------------------
 
 The user of the MediaTek X20 Development Board should never apply power to the board from J901 and the Low Speed Expansion connector at the same time. There is no active or passive mechanism on the MediaTek X20 Development Board to prioritize one source over the other.
 
-<img src="http://i.imgur.com/DnnDJkk.png" data-canonical-src="http://i.imgur.com/DnnDJkk.png" width="750" height="480" />
-
+.. image:: http://i.imgur.com/DnnDJkk.png
+    :width: 250px
+    :align: left
+    :height: 160px
+    :scale: 50 %
+    :alt: alternate text
 
 Voltage Rails
 -------------
@@ -659,7 +702,12 @@ Mechanical Specification
 2D Reference Drawing
 --------------------
 
-<img src="http://i.imgur.com/IdPzJTU.png" data-canonical-src="http://i.imgur.com/IdPzJTU.png" width="750" height="480" />
+.. image:: http://i.imgur.com/IdPzJTU.png
+    :width: 250px
+    :align: left
+    :height: 160px
+    :scale: 50 %
+    :alt: alternate text
 
 `Back to top`_
 
