@@ -1,7 +1,7 @@
 MediaTek X20 Development Board Hardware User Manual
 ###################################################
 
-.. contents::
+.. Contents::
    :depth: 2
 
 1. Introduction
