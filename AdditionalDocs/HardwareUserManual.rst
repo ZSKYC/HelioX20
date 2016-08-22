@@ -97,9 +97,19 @@ What's in the Box
 
 The box contains one MediaTek X20 Development Board and a quick start guide.
 
-<img src="http://i.imgur.com/YEnzcZI.png" data-canonical-src="http://i.imgur.com/YEnzcZI.png" width="400" height="270" />
-<img src="http://i.imgur.com/GZCNzUW.png" data-canonical-src="http://i.imgur.com/GZCNzUW.png" width="450" height="250" />
+.. image:: http://i.imgur.com/YEnzcZI.png
+    :width: 250px
+    :align: left
+    :height: 160px
+    :scale: 50 %
+    :alt: alternate text
 
+.. image:: http://i.imgur.com/GZCNzUW.png
+    :width: 250px
+    :align: left
+    :height: 160px
+    :scale: 50 %
+    :alt: alternate text
 
 `Back to top`_
 
@@ -110,8 +120,9 @@ The box contains one MediaTek X20 Development Board and a quick start guide.
 Board Overview
 ==============
 
++----------+-----------------+-----------------------------------------------------------+
 | Position |    Reference    | Description                                               |
-|---------:|:---------------:|:----------------------------------------------------------|
+|==========|=================|===========================================================|
 |    1     |     CON7001     |   Low Speed Expansion Connector                           |
 |    2     |      U4001      |   8GB EMMC                                                |
 |    3     |      U1001      |   MediaTek X20 MT6797 Soc + 2GB LPDDR3              |
