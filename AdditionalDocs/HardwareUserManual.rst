@@ -11,9 +11,10 @@ Introduction
 The MediaTek X20 Development Board is a 96Boards compliant community board based on MediaTek X20 platform.The following table lists its key features:
 
 .. image:: http://i.imgur.com/YEnzcZI.png
-    :width: 125px
+    :width: 250px
     :align: left
-    :height: 80px
+    :height: 160px
+    :scale: 50 %
     :alt: alternate text
 
 .. image:: http://i.imgur.com/eKif0Ri.png
