@@ -4,7 +4,7 @@ A comprehensive guide to using the [MediaTek X20](http://www.96boards.org/produc
 
 ## Contents
 
-- [Quickstart](Quickstart/README.md)
+- [Getting Started](GettingStarted/README.md)
    - Learn about your MediaTek X20 board, how to prepare and set up for basic use
 - [Installation](Installation/README.md)
    - Choose and install an operating system on your MediaTek X20
