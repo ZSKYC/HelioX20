@@ -87,8 +87,7 @@ The MediaTek X20 Development Board is a 96Boards compliant community board based
 `Internal and External links`_
 
 `Back to top`_
-
-.. _Back to top: #1-introduction
+.. _Back to top: #mediatek-x20-development-board-hardware-user-manual
 
 ***
 
