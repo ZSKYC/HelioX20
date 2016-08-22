@@ -1,4 +1,8 @@
-# MediaTek X20 Development Board Hardware User Manual
+MediaTek X20 Development Board Hardware User Manual
+###################################################
+
+.. contents::
+   :depth: 2
 
 ### Table of Contents
 - [Table of Contents](#table-of-contents)
@@ -48,7 +52,8 @@
 
 ***
 
-## Introduction
+1. Introduction
+===============
 
 The MediaTek X20 Development Board is a 96Boards compliant community board based on MediaTek X20 platform.The following table lists its key features:
 
