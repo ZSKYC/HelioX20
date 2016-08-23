@@ -589,7 +589,6 @@ The user of the MediaTek X20 Development Board should never apply power to the b
 |--------------|---------------------|------------------------|----------------|---------------------------------------------------|
 | BUCK         |  SYS_5V             | 5                      | 6000           | system 5V                                         |
 |              |  VBAT               | 4.2                    | 6000           | system power                                      |
-|              |                     |                        |                |                                                   |
 |              |  DVDD_PROC1         | 0.6 ~ 1.3              | 10000          | Core power for Processor of MT6797                |
 |              |  DVDD_PROC2         | 0.6 ~ 1.3              | 10000          |                                                   |
 |              |  DVDD_GPU           | 0.6 ~ 1.3              | 5000           | Core power for GPU of MT6797                      |
