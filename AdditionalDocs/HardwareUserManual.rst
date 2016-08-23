@@ -2,8 +2,10 @@
 MediaTek X20 Development Board Hardware User Manual
 ***************************************************
 
-.. Table of Contents::
+.. Contents::
    :depth: 2
+
+----
 
 Introduction
 ============
@@ -90,6 +92,8 @@ The MediaTek X20 Development Board is a 96Boards compliant community board based
 
 .. _Back to top: #mediatek-x20-development-board-hardware-user-manual
 
+----
+
 What's in the Box
 =================
 
@@ -112,6 +116,8 @@ The box contains one MediaTek X20 Development Board and a quick start guide.
 `Back to top`_
 
 .. _Back to top: #mediatek-x20-development-board-hardware-user-manual
+
+----
 
 Board Overview
 ==============
@@ -162,6 +168,8 @@ Board Overview
 
 .. _Back to top: #mediatek-x20-development-board-hardware-user-manual
 
+----
+
 System Block Diagram
 ====================
 
@@ -175,6 +183,8 @@ System Block Diagram
 `Back to top`_
 
 .. _Back to top: #mediatek-x20-development-board-hardware-user-manual
+
+----
 
 Getting Started
 ===============
@@ -206,6 +216,8 @@ To start the board, follow these simple steps:
 `Back to top`_
 
 .. _Back to top: #mediatek-x20-development-board-hardware-user-manual
+
+----
 
 Component Details
 =================
@@ -409,6 +421,8 @@ The MediaTek X20 Development Board also has a additional interface (CON9001)for 
 `Back to top`_
 
 .. _Back to top: #mediatek-x20-development-board-hardware-user-manual
+
+----
 
 Expansion Connectors
 ====================
@@ -631,6 +645,8 @@ Analog Expansion Connector
 
 .. _Back to top: #mediatek-x20-development-board-hardware-user-manual
 
+----
+
 Power Management Overview
 =========================
 
@@ -773,6 +789,8 @@ Voltage Rails
 `Back to top`_
 
 .. _Back to top: #mediatek-x20-development-board-hardware-user-manual
+
+----
 
 Mechanical Specification
 ========================
