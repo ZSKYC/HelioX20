@@ -7,16 +7,17 @@ This section show how to install a new operating system to your Helio X20 using 
 #### **Necessary Condition**
 
 You need prepare 6 components:
-- xflash.exe
-- Normal load(Include image files and scatter file etc.)
-- Special images and scatter file
-- lib.cfg.xml
-- fastboot.exe
-- fastboot command script file
+- PC Host has installed [Driver]() and [ADB]()
+- [xflash tools]()
+- [Normal images]() (Include image files and scatter file etc.)
+- [Special images] and scatter file
+- [fastboot]()
+- fastboot command script file eg.[xflash.bat]()
 
 #### **Flash Tool access path**
 
-alps\vendor\mediatek\proprietary\system\core\xflash
+From code source : alps\vendor\mediatek\proprietary\system\core\xflash
+You can also get it from the link above.
 
 #### **How to build special images**
 
@@ -34,17 +35,16 @@ PATH: \out\target\product\amt6797_64_open\FES
 
 #### **Prepare your Windows host machine**
 
-- xflash.exe
-   - \xflash\bin\win\xflash.exe
+- A windowns PC host
+   - ADB and ADB Driver need installed in this windows PC, thus, we can send adb command by it.
 - Normal load(Include image files and scatter file etc.)
    - You can put it in anywhere, eg, \xflash\bin\win\img
+   - The PGPT file can't generated from your build system, so if you build new images, this file should be reserved(it can format the eMMC into constant partition).
 - Special images and scatter file
-   - You can put it in anywhere, eg, \xflash\bin\win\FES. How to build it?
-   - Please see “How to build special images”.
-- lib.cfg.xml
-   - \xflash\bin\win\config
+   - You can put it in anywhere, eg, \xflash\bin\win\FES. 
+   - How to build it? Please see “How to build special images”.
 - fastboot.exe
-   - \xflash\bin\win, you shoud put it in normal load folder.
+   - you can put it in normal load folder.
 - fastboot command script file
    - Writen by yourself, you should put it in normal load folder.
 
