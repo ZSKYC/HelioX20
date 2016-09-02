@@ -10,7 +10,7 @@ You need prepare 6 components:
 - PC Host has installed [Driver]() and [ADB]()
 - [xflash tools]()
 - [Normal images]() (Include image files and scatter file etc.)
-- [Special images] and scatter file
+- [Special images]() and scatter file
 - [fastboot]()
 - fastboot command script file eg.[xflash.bat]()
 
