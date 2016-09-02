@@ -7,16 +7,17 @@ This section show how to install a new operating system to your Helio X20 using 
 #### **Necessary Condition**
 
 You need prepare 6 components:
-- xflash
-- Normal load(Include image files and scatter file etc.)
-- Special images and scatter file
-- lib.cfg.xml
-- fastboot command
-- fastboot command script file
+- PC Host has installed ADB
+- [xflash tools]()
+- [Normal images]() (Include image files and scatter file etc.)
+- [Special images]() and scatter file
+- fastboot command need be support
+- fastboot command script file eg. [xflash.sh]()
 
 #### **Flash Tool access path**
 
-alps\vendor\mediatek\proprietary\system\core\xflash
+From code source : alps\vendor\mediatek\proprietary\system\core\xflash
+You can also get it from the link above.
 
 #### **How to build special images**
 
@@ -34,19 +35,18 @@ PATH: \out\target\product\amt6797_64_open\FES
 
 #### **Prepare your Linux host machine**
 
-- xflash
-   - \xflash\bin\linux\xflash
+- A Linux PC host
+   - ADB need installed in this linux PC, thus, we can send adb command by it.
 - Normal load(Include image files and scatter file etc.)
    - You can put it in anywhere, eg, \xflash\bin\linux\img
+   - The PGPT file can't generated from your build system, so if you build new images, this file should be reserved(it can format the eMMC into constant partition).
 - Special images and scatter file
-   - You can put it in anywhere, eg, \xflash\bin\linux\FES. How to build it? 
-   - Please see “How to build special images”.
-- lib.cfg.xml
-   - \xflash\bin\linux\config
+   - You can put it in anywhere, eg, \xflash\bin\linux\FES. 
+   - How to build it? Please see “How to build special images”.
 - fastboot
-   - If your OS doesn't support fastboot command, pls install this command frist.
+   - Install fastboot to your linux PC.
 - fastboot command script file
-   - Writen by your self, you should put it in normal load folder.
+   - Writen by yourself, you should put it in normal load folder.
 
 #### **Ubuntu Download**
 
@@ -54,7 +54,7 @@ Step 1. Make a device to enter fastboot mode
 - Prepare special images and corresponding scatter file.
 - Run program in command line mode like this:
 
-    `$ sudo ./xflash enter-fastboot "/**/xflash/bin/win/FES/MT6797_Android_scatter.txt"`
+    `$ sudo ./xflash enter-fastboot "/**/xflash/bin/linux/FES/MT6797_Android_scatter.txt"`
 - Then plug in USB cable to device without power adapter.
 - Plug in power adapter then
 - Xflash will scan and open device COM port and connect it, download some necessary images to devices, then make device to enter fastboot mode.
