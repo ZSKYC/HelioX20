@@ -12,7 +12,7 @@ You need prepare 6 components:
 - [Normal images]() (Include image files and scatter file etc.)
 - [Special images]() and scatter file
 - [fastboot]()
-- fastboot command script file eg.[xflash.bat]()
+- fastboot command script file eg. [xflash.bat]()
 
 #### **Flash Tool access path**
 
