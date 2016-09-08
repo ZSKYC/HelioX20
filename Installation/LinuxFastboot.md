@@ -14,7 +14,7 @@ This section show how to install a new operating system to your MediaTek X20 usi
 
 **Step 1**: Make sure you have downloaded all "Normal Images" to your Linux host machine
 
-In order to prodeed with these installation instructions, you will need to download all necessary files/images onto your Linux host machine.
+In order to proceed with these installation instructions, you will need to download all necessary files/images onto your Linux host machine.
 
 Please visit the [Downloads Page](../Downloads/README.md) for a list of available MediaTek X20 operating systems.
 
@@ -28,7 +28,7 @@ If you are still having trouble setting up fastboot and adb, <a href="https://yo
 
 **Step 3**: Prepare MediaTek X20 development board
 
-Before flahing the new Operating System files onto a MediaTek X20 development board, you must first ensure a successfull stock Android boot. **For this step you must have adb (Android Debug Bridge) successfully setup on your Linux host machine**.
+Before flashing the new Operating System files onto a MediaTek X20 development board, you must first ensure a successful stock Android boot. **For this step you must have adb (Android Debug Bridge) successfully setup on your Linux host machine**.
 
 - Connect the HDMI cable to the MediaTek X20 Development Board connector (marked CON6501) and to the LCD Monitor (Optional)
 - Set the the third pin (USB HOST SET) of switch SW3205 to the position ON and connect the keyboard to USB connector marked CON6402 and the mouse to the USB connector marked CON6401 (It doesn’t matter which order you connect them in.)
@@ -117,7 +117,7 @@ You can also get it from the link above.
 
 #### **How to build special images**
 
-Execute following commands, build system will automatically create FES folder and come out the special lk.bin, where FES store the needed files for xflash download to target befor entering fastboot mode. 
+Execute following commands, build system will automatically create FES folder and come out the special lk.bin, where FES store the needed files for xflash download to target before entering fastboot mode. 
 
 `$ source build/envsetup.sh`
 
@@ -142,7 +142,7 @@ PATH: \out\target\product\amt6797_64_open\FES
 - fastboot
    - Install fastboot to your linux PC.
 - fastboot command script file
-   - Writen by yourself, you should put it in normal load folder.
+   - Written by yourself, you should put it in normal load folder.
 
 #### **Ubuntu Download**
 
