@@ -1,4 +1,101 @@
-## Windows Host
+## Windows Host - NEW
+
+This section show how to install a new operating system to your MediaTek X20 using the fastboot method on a Windows host computer.
+
+***
+
+- **Step 1**: Make sure you have downloaded all files/images to your Windows host machine
+- **Step 2**: Make sure "fastboot" and "adb" are set up on you Windows host machine
+- **Step 3**: Prepare MediaTek X20 development board
+- **Step 4**: Boot MediaTek X20 development board into Fastboot mode
+- **Step 5**: Install Operating System update using downloaded files(images)
+
+***
+
+**Step 1**: Make sure you have downloaded all "Normal Images" to your Windows host machine
+
+In order to prodeed with these installation instructions, you will need to download all necessary files/images onto your Windows host machine.
+
+Please visit the [Downloads Page](../Downloads/README.md) for a list of available MediaTek X20 operating systems.
+
+**Step 2**: Make sure "fastboot" and "adb" are set up on you Windows host machine
+
+- Android SDK “Tools only” for Windows can be downloaded <a href="http://developer.android.com/sdk" target="_blank">here</a>
+- The Windows “Tools Only” SDK download does not come with fastboot, you will need to use the Android SDK Manager to install platform-tools.
+- To do this follow the “SDK Readme.txt” instructions included in your SDK “Tools Only” download.
+
+If you are still having trouble setting up fastboot and adb, <a href="https://youtu.be/W_zlydVBftA" target="_blank">click here</a> for a short tutorial video
+
+**Step 3**: Prepare MediaTek X20 development board
+
+Before flahing the new Operating System files onto a MediaTek X20 development board, you must first ensure a successfull stock Android boot. **For this step you must have adb (Android Debug Bridge) successfully setup on your Windows host machine**.
+
+- Connect the HDMI cable to the MediaTek X20 Development Board connector (marked CON6501) and to the LCD Monitor (Optional)
+- Set the the third pin (USB HOST SET) of switch SW3205 to the position ON and connect the keyboard to USB connector marked CON6402 and the mouse to the USB connector marked CON6401 (It doesn’t matter which order you connect them in.)
+- Plug the power supply into the power outlet
+- Press down the button (marked SW3201), and keep more than 3 seconds, the Android system will start
+- Verify your MediaTek X20 board is detected using adb with the following command:
+
+```shell
+$ adb devices
+```
+
+Once you have ensured the board is detected by your Windows host machine using adb, proceed to the next step. If you are experiencing issues with this step you may want to:
+
+1. Troubleshoot the adb setup on your host machine (**Step 2**)
+2. Attempt a [Board Recovery](../Installation/BoardRecovery.md)
+3. Visit the MediaTek X20 [Troubleshooting Page](../Troubleshooting/README.md) 
+
+**Step 4**: Boot MediaTek X20 development board into Fastboot mode
+
+Using adb, the MediaTek X20 can be easily booted into fastboot mode with the following command:
+
+```shell
+$ adb reboot bootloader
+```
+
+To ensure the MediaTek X20 development board is in fact booted into fastboot mode, execute the following command:
+
+```shell
+$ fastboot devices
+```
+
+Once you have ensured the board is detected by your Windows host machine using fastboot, proceed to the next step. If you are experiencing issues with this step you may want to:
+
+1. Troubleshoot the fastboot setup on your host machine (**Step 2**)
+2. Attempt a [Board Recovery](../Installation/BoardRecovery.md)
+3. Visit the MediaTek X20 [Troubleshooting Page](../Troubleshooting/README.md) 
+
+**Step 5**: Install Operating System update using downloaded files(images) and reboot
+
+Please visit the [Downloads Page](../Downloads/README.md) for a list of available MediaTek X20 operating systems. (**Step 1**)
+
+Executing the following commands from your command lin,e while within the appropriate directory, will flash each individual component to your MediaTek X20 development board. Once you have done this, the `fastboot reboot` command will reboot your board into your newly installed operating system.
+
+```shell
+fastboot flash gpt PGPT
+fastboot flash preloader preloader_amt6797_64_open.bin
+fastboot flash recovery recovery.img
+fastboot flash scp1 tinysys-scp.bin
+fastboot flash scp2 tinysys-scp.bin
+fastboot flash lk lk.bin
+fastboot flash lk2 lk.bin
+fastboot flash boot boot.img
+fastboot flash logo logo.bin
+fastboot flash tee1 trustzone.bin
+fastboot flash tee2 trustzone.bin
+fastboot flash system system.img
+fastboot flash cache cache.img
+fastboot flash userdata userdata.img
+fastboot reboot
+```
+
+**Congratulations! You are now booting your newly installed OS directly
+from eMMC on the MediaTek X20!**
+
+***
+
+## Windows Host - OLD
 
 This section show how to install a new operating system to your Helio X20 using the fastboot method on a Windows host computer.
 
