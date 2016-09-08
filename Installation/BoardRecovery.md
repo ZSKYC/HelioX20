@@ -1,7 +1,9 @@
 # MediaTek X20 Board Recovery
 
-- For most users, a board could be “recovered” from a software failure by reloading the operating system using the instructions provided above. 
+- For most users, a board could be “recovered” from a software failure by reloading the operating system using the instructions found on the [Installation page](README.md). 
 - You could also recover the board by Backup & reset option in Settings Application.
+
+The following instructions are for board recovery if and when the above recovery options fail to work. Only proceed if you have exercised all other options.
 
 #### **Necessary Condition**
 
@@ -45,7 +47,7 @@ PATH: \out\target\product\amt6797_64_open\FES
 - fastboot
    - Install fastboot to your linux PC.
 - fastboot command script file
-   - Writen by yourself, you should put it in normal load folder.
+   - Written by yourself, you should put it in normal load folder.
 
 #### **Ubuntu Download**
 
