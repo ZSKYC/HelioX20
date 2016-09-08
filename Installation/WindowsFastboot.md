@@ -14,7 +14,7 @@ This section show how to install a new operating system to your MediaTek X20 usi
 
 **Step 1**: Make sure you have downloaded all "Normal Images" to your Windows host machine
 
-In order to prodeed with these installation instructions, you will need to download all necessary files/images onto your Windows host machine.
+In order to proceed with these installation instructions, you will need to download all necessary files/images onto your Windows host machine.
 
 Please visit the [Downloads Page](../Downloads/README.md) for a list of available MediaTek X20 operating systems.
 
@@ -28,7 +28,7 @@ If you are still having trouble setting up fastboot and adb, <a href="https://yo
 
 **Step 3**: Prepare MediaTek X20 development board
 
-Before flahing the new Operating System files onto a MediaTek X20 development board, you must first ensure a successfull stock Android boot. **For this step you must have adb (Android Debug Bridge) successfully setup on your Windows host machine**.
+Before flashing the new Operating System files onto a MediaTek X20 development board, you must first ensure a successful stock Android boot. **For this step you must have adb (Android Debug Bridge) successfully setup on your Windows host machine**.
 
 - Connect the HDMI cable to the MediaTek X20 Development Board connector (marked CON6501) and to the LCD Monitor (Optional)
 - Set the the third pin (USB HOST SET) of switch SW3205 to the position ON and connect the keyboard to USB connector marked CON6402 and the mouse to the USB connector marked CON6401 (It doesn’t matter which order you connect them in.)
@@ -70,7 +70,7 @@ Once you have ensured the board is detected by your Windows host machine using f
 
 Please visit the [Downloads Page](../Downloads/README.md) for a list of available MediaTek X20 operating systems. (**Step 1**)
 
-Executing the following commands from your command lin,e while within the appropriate directory, will flash each individual component to your MediaTek X20 development board. Once you have done this, the `fastboot reboot` command will reboot your board into your newly installed operating system.
+Executing the following commands from your command line while within the appropriate directory, will flash each individual component to your MediaTek X20 development board. Once you have done this, the `fastboot reboot` command will reboot your board into your newly installed operating system.
 
 ```shell
 fastboot flash gpt PGPT
@@ -132,7 +132,7 @@ PATH: \out\target\product\amt6797_64_open\FES
 
 #### **Prepare your Windows host machine**
 
-- A windowns PC host
+- A Windows PC host
    - ADB and ADB Driver need installed in this windows PC, thus, we can send adb command by it.
 - Normal load(Include image files and scatter file etc.)
    - You can put it in anywhere, eg, \xflash\bin\win\img
@@ -143,7 +143,7 @@ PATH: \out\target\product\amt6797_64_open\FES
 - fastboot.exe
    - you can put it in normal load folder.
 - fastboot command script file
-   - Writen by yourself, you should put it in normal load folder.
+   - Written by yourself, you should put it in normal load folder.
 
 #### **Windows Download**
 
