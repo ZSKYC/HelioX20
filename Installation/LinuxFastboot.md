@@ -1,10 +1,10 @@
-## Linux Host - NEW
+## Linux Host
 
-This section show how to install a new operating system to your MediaTek X20 using the fastboot method on a Linux host computer.
+This section show how to install the Android operating system to your MediaTek X20 using the fastboot method on a Linux host computer.
 
 ***
 
-- **Step 1**: Make sure you have downloaded all files/images to your Linux host machine
+- **Step 1**: Download and untar/unzip all necessary files
 - **Step 2**: Make sure "fastboot" and "adb" are set up on you Linux host machine
 - **Step 3**: Prepare MediaTek X20 development board
 - **Step 4**: Boot MediaTek X20 development board into Fastboot mode
@@ -12,13 +12,15 @@ This section show how to install a new operating system to your MediaTek X20 usi
 
 ***
 
-**Step 1**: Make sure you have downloaded all "Normal Images" to your Linux host machine
+#### **Step 1**: Download and untar/unzip all necessary files
 
 In order to proceed with these installation instructions, you will need to download all necessary files/images onto your Linux host machine.
 
-Please visit the [Downloads Page](../Downloads/README.md) for a list of available MediaTek X20 operating systems.
+|   Tarball          |                                                                                                  |
+|:-------------------|:-------------------------------------------------------------------------------------------------|
+| 96board_v3.tar.gz  | [Download](http://builds.96boards.org/releases/helio-x20/mediatek/aosp/latest/96board_v3.tar.gz) |
 
-**Step 2**: Make sure "fastboot" and "adb" are set up on you Linux host machine
+#### **Step 2**: Make sure "fastboot" and "adb" are set up on you Linux host machine
 
 - Android SDK “Tools only” for Linux can be downloaded <a href="http://developer.android.com/sdk" target="_blank">here</a>
 - The Linux “Tools Only” SDK download does not come with fastboot, you will need to use the Android SDK Manager to install platform-tools.
@@ -26,7 +28,7 @@ Please visit the [Downloads Page](../Downloads/README.md) for a list of availabl
 
 If you are still having trouble setting up fastboot and adb, <a href="https://youtu.be/W_zlydVBftA" target="_blank">click here</a> for a short tutorial video
 
-**Step 3**: Prepare MediaTek X20 development board
+#### **Step 3**: Prepare MediaTek X20 development board
 
 Before flashing the new Operating System files onto a MediaTek X20 development board, you must first ensure a successful stock Android boot. **For this step you must have adb (Android Debug Bridge) successfully setup on your Linux host machine**.
 
@@ -46,7 +48,7 @@ Once you have ensured the board is detected by your Linux host machine using adb
 2. Attempt a [Board Recovery](../Installation/BoardRecovery.md)
 3. Visit the MediaTek X20 [Troubleshooting Page](../Troubleshooting/README.md) 
 
-**Step 4**: Boot MediaTek X20 development board into Fastboot mode
+#### **Step 4**: Boot MediaTek X20 development board into Fastboot mode
 
 Using adb, the MediaTek X20 can be easily booted into fastboot mode with the following command:
 
@@ -66,9 +68,9 @@ Once you have ensured the board is detected by your Linux host machine using fas
 2. Attempt a [Board Recovery](../Installation/BoardRecovery.md)
 3. Visit the MediaTek X20 [Troubleshooting Page](../Troubleshooting/README.md) 
 
-**Step 5**: Install Operating System update using downloaded files(images) and reboot
+#### **Step 5**: Install Operating System update using downloaded files(images) and reboot
 
-Please visit the [Downloads Page](../Downloads/README.md) for a list of available MediaTek X20 operating systems. (**Step 1**)
+Please re-visit **Step 1** if you have not already downloaded the appropriate MediaTek X20 operating system images.
 
 Executing the following commands from your command lin,e while within the appropriate directory, will flash each individual component to your MediaTek X20 development board. Once you have done this, the `fastboot reboot` command will reboot your board into your newly installed operating system.
 
@@ -92,91 +94,3 @@ $ fastboot reboot
 
 **Congratulations! You are now booting your newly installed OS directly
 from eMMC on the MediaTek X20!**
-
-
-## Linux Host - OLD
-
-This section show how to install a new operating system to your MediaTek X20 using the fastboot method on a Linux host computer.
-
-***
-
-#### **Necessary Condition**
-
-You need prepare 6 components:
-- PC Host has installed ADB
-- [xflash tools]()
-- [Normal images]() (Include image files and scatter file etc.)
-- [Special images]() and scatter file
-- fastboot command need be support
-- fastboot command script file eg. [xflash.sh]()
-
-#### **Flash Tool access path**
-
-From code source : alps\vendor\mediatek\proprietary\system\core\xflash
-You can also get it from the link above.
-
-#### **How to build special images**
-
-Execute following commands, build system will automatically create FES folder and come out the special lk.bin, where FES store the needed files for xflash download to target before entering fastboot mode. 
-
-`$ source build/envsetup.sh`
-
-`$ lunch full_amt6797_64_open-eng`
-
-`$ make -j16 PLATFORM_FASTBOOT_EMPTY_STORAGE=yes -k 2>&1 | tee build.log`
-
-Then, you can find a folder named FES.
-
-PATH: \out\target\product\amt6797_64_open\FES
-
-#### **Prepare your Linux host machine**
-
-- A Linux PC host
-   - ADB need installed in this linux PC, thus, we can send adb command by it.
-- Normal load(Include image files and scatter file etc.)
-   - You can put it in anywhere, eg, \xflash\bin\linux\img
-   - The PGPT file can't generated from your build system, so if you build new images, this file should be reserved(it can format the eMMC into constant partition).
-- Special images and scatter file
-   - You can put it in anywhere, eg, \xflash\bin\linux\FES. 
-   - How to build it? Please see “How to build special images”.
-- fastboot
-   - Install fastboot to your linux PC.
-- fastboot command script file
-   - Written by yourself, you should put it in normal load folder.
-
-#### **Ubuntu Download**
-
-Step 1. Make a device to enter fastboot mode
-- Prepare special images and corresponding scatter file.
-- Run program in command line mode like this:
-
-    `$ sudo ./xflash enter-fastboot "/**/xflash/bin/linux/FES/MT6797_Android_scatter.txt"`
-- Then plug in USB cable to device without power adapter.
-- Plug in power adapter then
-- Xflash will scan and open device COM port and connect it, download some necessary images to devices, then make device to enter fastboot mode.
-
-Step 2. Run fastboot command script file
-- You need write a download script.
-
-        Such as xflash.sh
-        
-        #!/bin/bash
-        
-        fastboot devices
-        fastboot flash gpt PGPT
-        fastboot flash preloader preloader_amt6797_64_open.bin
-        fastboot flash recovery recovery.img
-        fastboot flash scp1 tinysys-scp.bin
-        fastboot flash scp2 tinysys-scp.bin
-        fastboot flash lk lk.bin
-        fastboot flash lk2 lk.bin
-        fastboot flash boot boot.img
-        fastboot flash logo logo.bin
-        fastboot flash tee1 trustzone.bin
-        fastboot flash tee2 trustzone.bin
-        fastboot flash system system.img
-        fastboot flash cache cache.img
-        fastboot flash userdata userdata.img
-        fastboot reboot
-        
-- Run the download script, download success.
