@@ -4,35 +4,7 @@
 
 ***
 
-## SD Card image
-
-Currenty not available...
+- [Windows Host Machine](WindowsFastboot.md)
+- [Linux Host Machine](LinuxFastboot.md)
 
 ***
-
-## Special Images
-
-|   Bootloader      |                        |
-|:------------------|:-----------------------|
-| lk.bin            | [Download]()           |
-| logo.bin            | [Download]()           | 
-| preloader_amt6797_64_open.bin            | [Download]()           | 
-| trustzone.bin            | [Download]()           | 
-| MT6797_Android_scatter.txt            | [Download]()           | 
-
-## Normal Images
-|   Latest build files    |    [Build Folder]()    |
-|:------------------------|:-----------------------|
-| PGPT            | [Download]()           |
-| preloader_amt6797_64_open.bin            | [Download]()           |
-| recovery.img         | [Download]()           |
-| tinysys-scp.bin         | [Download]()           |
-| lk.bin                  | [Download]()           |
-| boot.img                | [Download]()           |
-| logo.bin                | [Download]()           |
-| trustzone.bin           | [Download]()           |
-| system.img              | [Download]()           |
-| cache.img               | [Download]()           |
-| userdata.img            | [Download]()           |
-
-Continue to [Installation page](../Installation/README.md)
