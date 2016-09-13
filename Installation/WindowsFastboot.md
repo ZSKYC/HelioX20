@@ -1,10 +1,10 @@
-## Windows Host - NEW
+## Windows Host
 
-This section show how to install a new operating system to your MediaTek X20 using the fastboot method on a Windows host computer.
+This section show how to install the Android operating system to your MediaTek X20 using the fastboot method on a Windows host computer.
 
 ***
 
-- **Step 1**: Make sure you have downloaded all files/images to your Windows host machine
+- **Step 1**: Download and untar/unzip all necessary files
 - **Step 2**: Make sure "fastboot" and "adb" are set up on you Windows host machine
 - **Step 3**: Prepare MediaTek X20 development board
 - **Step 4**: Boot MediaTek X20 development board into Fastboot mode
@@ -12,11 +12,11 @@ This section show how to install a new operating system to your MediaTek X20 usi
 
 ***
 
-**Step 1**: Make sure you have downloaded all "Normal Images" to your Windows host machine
+#### **Step 1**: Download and untar/unzip all necessary files
 
-In order to proceed with these installation instructions, you will need to download all necessary files/images onto your Windows host machine.
-
-Please visit the [Downloads Page](../Downloads/README.md) for a list of available MediaTek X20 operating systems.
+|   Tarball      |                        |
+|:------------------|:-----------------------|
+| 96board_v3.tar.gz  | [Download](http://builds.96boards.org/releases/helio-x20/mediatek/aosp/latest/96board_v3.tar.gz) |
 
 **Step 2**: Make sure "fastboot" and "adb" are set up on you Windows host machine
 
@@ -68,7 +68,7 @@ Once you have ensured the board is detected by your Windows host machine using f
 
 **Step 5**: Install Operating System update using downloaded files(images) and reboot
 
-Please visit the [Downloads Page](../Downloads/README.md) for a list of available MediaTek X20 operating systems. (**Step 1**)
+Please re-visit **Step 1** if you have not already downloaded the appropriate MediaTek X20 operating system images.
 
 Executing the following commands from your command line while within the appropriate directory, will flash each individual component to your MediaTek X20 development board. Once you have done this, the `fastboot reboot` command will reboot your board into your newly installed operating system.
 
