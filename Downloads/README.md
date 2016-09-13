@@ -14,6 +14,6 @@ The MediaTek X20 comes pre-installed with Android. If you would like to switch t
 
 Other operating systems supported on MediaTek X20, offered by partners.
 
-- [Android](AOSP.md)
+- [Android](ThirdParty/AOSP/README.md)
 
 ***
