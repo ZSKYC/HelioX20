@@ -16,7 +16,8 @@ This method requires the following hardware:
 - USB Mouse and/or keyboard (not required to perform flash)
 - HDMI Monitor with full size HDMI cable (not required to perform flash)
 
+***
+
 - [Windows Host Machine](WindowsFastboot.md)
 - [Linux Host Machine](LinuxFastboot.md)
 
-***
